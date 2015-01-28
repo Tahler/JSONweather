@@ -2,6 +2,10 @@ var weatherData;
 var request = new XMLHttpRequest();
 var date = new Date();
 
+$('.accordion').html('<h3>tuesday</h3>');
+
+////////////////////// Mr. Beatty's code ////////////////////////
+
 loadData();
 
 function loadData() {
