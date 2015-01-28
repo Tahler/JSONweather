@@ -1,54 +1,87 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <title>JSONweather</title>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
         <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/themes/smoothness/jquery-ui.css" />
         <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
-        <link rel="stylesheet" href="main.css">
+        <link rel="stylesheet" href="main.css" type="text/css">
     </head>
     <body>
         <section>
+            <div id="location"></div>
             
             <div class="accordion">
-                <h3 id="day0">Today</h3>
-                <div id="day0">today's weather goes here</div>
+                <h3 id="day0header"></h3>
+                <div id="day0content">
+                    <div id="icon"></div>
+                    <div id="conditions"></div>
+                    <div id="currentTemp"></div>
+                    <div id="highLowTemp"></div>
+                </div>
             </div>
+            
             <div class="accordion">               
-                <h3 id="day1">Tomorrow</h3>
-                <div id="day1">tomorrow's weather goes here</div>
+                <h3 id="day1header"></h3>
+                <div id="day1content">
+                    <div id="icon"></div>
+                    <div id="conditions"></div>
+                    <div id="currentTemp"></div>
+                    <div id="highLowTemp"></div>
+                </div>
             </div>
+            
             <div class="accordion">               
-                <h3 id="day2">The next day</h3>
-                <div id="day2">...</div>
+                <h3 id="day2header"></h3>
+                <div id="day2content">
+                    <div id="icon"></div>
+                    <div id="conditions"></div>
+                    <div id="currentTemp"></div>
+                    <div id="highLowTemp"></div>
+                </div>
             </div>
+            
             <div class="accordion">               
-                <h3 id="day3">And the next day</h3>
-                <div id="day3">....</div>
+                <h3 id="day3header"></h3>
+                <div id="day3content">
+                    <div id="icon"></div>
+                    <div id="conditions"></div>
+                    <div id="currentTemp"></div>
+                    <div id="highLowTemp"></div>
+                </div>
             </div>
+            
             <div class="accordion">               
-                <h3 id="day4">And the next next day</h3>
-                <div id="day4">.....</div>
+                <h3 id="day4header"></h3>
+                <div id="day4content">
+                    <div id="icon"></div>
+                    <div id="conditions"></div>
+                    <div id="currentTemp"></div>
+                    <div id="highLowTemp"></div>
+                </div>
             </div>
+            
             <div class="accordion">               
-                <h3 id="day5">And the next next next day</h3>
-                <div id="day5">......</div>
+                <h3 id="day5header"></h3>
+                <div id="day5content">
+                    <div id="icon"></div>
+                    <div id="conditions"></div>
+                    <div id="currentTemp"></div>
+                    <div id="highLowTemp"></div>
+                </div>
             </div>
+            
             <div class="accordion">               
-                <h3 id="day6">And the next next next next day</h3>
-                <div id="day6">.......</div>
+                <h3 id="day6header"></h3>
+                <div id="day6content">
+                    <div id="icon"></div>
+                    <div id="conditions"></div>
+                    <div id="currentTemp"></div>
+                    <div id="highLowTemp"></div>
+                </div>
             </div>
-        
+            
         </section>
-        
-<!--
-        <div id="content">
-            <div id="place"></div>
-            <div id="day"></div>
-            <div id="conditions"></div>
-            <div id="conditionsDesc"></div>
-            <div id="currentTemp"></div>
-        </div>
--->
     <script src="scripts/jqueryuistuff.js"></script>
     </body>
 </html>
