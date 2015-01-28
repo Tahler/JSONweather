@@ -1,0 +1,14 @@
+
+.accordion {
+    display: inline-block;
+    width: 10%;
+}
+
+.accordion .ui-accordion-header {
+    /*modifies the header of the accordion*/
+}
+
+.accordion .ui-accordion-content {
+    /*modifies the content of the accordion*/
+}
+
