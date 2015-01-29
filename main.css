@@ -13,13 +13,12 @@
 
 .accordion .ui-accordion-content {
     /*modifies the content of the accordion*/
-    height: 100px;
+    height: 130px;
 }
 
 .button {
     clear: both;
     text-align: center;
-/*    vertical-align: middle;*/
     margin: 5px;
     width: 100px;
     height: 25px;
