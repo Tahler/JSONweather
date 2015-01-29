@@ -35,7 +35,7 @@ function formatDate(rawDate) {
     return months[rawDate.getMonth()] + ' ' + rawDate.getDate() + ', ' + rawDate.getFullYear(); // reads as January 28, 2015
 }
 
-function fillAccordionHeaders() {
+function fillAccordions() {
     for(var i = 0; i < 7; i++) {
         // Headers
         var dayNumber = date.getDay() + i;
@@ -43,16 +43,9 @@ function fillAccordionHeaders() {
         document.getElementById('day' + i + 'header').innerHTML = days[dayNumber];
         
         // Contents
-        document.getElementById('date').innerHTML = formatDate(date);
+        date.setDate(date.getDate() + 1); // Don't add i! add 1 since it is being set everytime.
+        document.getElementById('day' + i + 'date').innerHTML = formatDate(date);
     }
 }
 
-function fillAccordionContent() {
-    for(var i = 0; i < 7; i++) {
-        
-    }
-}
-
-fillAccordionHeaders();
-fillAccordionContent();
-
+fillAccordions();
