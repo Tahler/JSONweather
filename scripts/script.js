@@ -1,3 +1,5 @@
+// Change color of the content backgrounds to match the temperature...
+
 ////////////////////// "Mr. Beatty's" code ////////////////////////
 
 var weatherData;
@@ -14,13 +16,15 @@ function loadData() {
 
 function loadComplete(evt) {
     weatherData = JSON.parse(request.responseText);
-    document.getElementById('location').innerHTML = 'Weather forecast for: '+weatherData.city.name;
+    document.getElementById('location').innerHTML = 'Forecast for ' + weatherData.city.name;
 //    
     
     fillAccordions(weatherData);
 }
 
 ////////////////////// Our code ////////////////////////
+
+$('.accordion').css('width', document.getElementById('section').offsetWidth / 7 - 13); // hardcoded AF
 
 var days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
 var months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
@@ -39,14 +43,14 @@ function fillAccordions(weatherData) {
         var dayNumber = date.getDay();
         if(dayNumber >= 7) dayNumber -= 7;
         date.setDate(date.getDate() + 1); // Don't add i! add 1 since it is being set everytime.
-        document.getElementById('day' + i + 'header').innerHTML = days[dayNumber] +'<br/>'+ formatDate(date);
+        document.getElementById('day' + i + 'header').innerHTML = '<h4>' + days[dayNumber] + '</h4>' + '<h5>' + formatDate(date) + '</h5>';
         
         // Contents
         document.getElementById('day' + i + 'highLowTemp').innerHTML = Math.round(weatherData.list[i].temp.max) + '/' + Math.round(weatherData.list[i].temp.min);
         document.getElementById('day' + i + 'conditions').innerHTML = weatherData.list[i].weather[0].main;
         document.getElementById('day' + i + 'icon').src = 'http://openweathermap.org/img/w/' + weatherData.list[i].weather[0].icon + '.png';
         document.getElementById('day' + i + 'currentTemp').innerHTML = Math.round(weatherData.list[i].temp.day); 
-        console.log('http://openweathermap.org/img/w/' + weatherData.list[i].weather[0].icon + '.png');
-        console.log(weatherData);
+//        console.log('http://openweathermap.org/img/w/' + weatherData.list[i].weather[0].icon + '.png');
+//        console.log(weatherData);
     }
 }

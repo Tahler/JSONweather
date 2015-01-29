@@ -1,17 +1,23 @@
 html{ 
     background-color:#95A7B2;
+/*    color: #fff;*/
     font-family: cursive;
     font-size: 1.2em; 
     font-feature-settings: Arial, Helvetica, 
 }
 
 section {
-    color: #fff;
     margin: 50px;
     background: #505C5C;
     border: 5px solid #000;
     padding: 3px;
-    height: 500px;
+/*    Totall hardcoded...*/
+    height: 320px; 
+}
+
+#location {
+    text-align: center;
+    display: inline;
 }
 
 .accordion {
@@ -19,6 +25,19 @@ section {
     display: inline-block;
     margin: 5px;
     width: 13%;
+}
+
+.accordion h1, h2, h3, h4, h5, h6 {
+    padding: 2px;
+    margin: 0px;
+}
+
+.accordion h4 {
+    font-size: 1.2em;
+}
+
+.accordion h5 {
+    font-size: .7em;
 }
 
 .accordion .ui-accordion-header {
@@ -37,6 +56,7 @@ section {
     font-family: cursive;
     font-feature-settings: Arial, Helvetica,
 }
+
 
 .button {
     clear: both;
@@ -63,8 +83,4 @@ section {
 }
 
 /* Need to clear:both */
-
-p {
-/*    clear: both;*/
-}
 
