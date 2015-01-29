@@ -14,7 +14,7 @@ function loadData() {
 
 function loadComplete(evt) {
     weatherData = JSON.parse(request.responseText);
-    document.getElementById("location").innerHTML = "Weather forecast for: "+weatherData.city.name;
+    document.getElementById('location').innerHTML = 'Weather forecast for: '+weatherData.city.name;
 //    
     
     fillAccordions(weatherData);
@@ -42,11 +42,11 @@ function fillAccordions(weatherData) {
         document.getElementById('day' + i + 'header').innerHTML = days[dayNumber] +'<br/>'+ formatDate(date);
         
         // Contents
-        document.getElementById('day' + i + 'highLowTemp').innerHTML = Math.round(weatherData.list[i].temp.max)+"/"+Math.round(weatherData.list[i].temp.min);
-        document.getElementById("day"+i+"conditions").innerHTML = weatherData.list[i].weather[0].main;
-        document.getElementById("day"+i+"icon").src = "http://openweathermap.org/img/w/"+weatherData.list[i].weather[0].icon+".png";
-        document.getElementById("day"+i+"currentTemp").innerHTML = Math.round(weatherData.list[i].temp.day); 
-        console.log("http://openweathermap.org/img/w/"+weatherData.list[i].weather[0].icon+".png");
+        document.getElementById('day' + i + 'highLowTemp').innerHTML = Math.round(weatherData.list[i].temp.max) + '/' + Math.round(weatherData.list[i].temp.min);
+        document.getElementById('day' + i + 'conditions').innerHTML = weatherData.list[i].weather[0].main;
+        document.getElementById('day' + i + 'icon').src = 'http://openweathermap.org/img/w/' + weatherData.list[i].weather[0].icon + '.png';
+        document.getElementById('day' + i + 'currentTemp').innerHTML = Math.round(weatherData.list[i].temp.day); 
+        console.log('http://openweathermap.org/img/w/' + weatherData.list[i].weather[0].icon + '.png');
         console.log(weatherData);
     }
 }

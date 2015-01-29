@@ -18,7 +18,6 @@ section {
     float: left;
     display: inline-block;
     margin: 5px;
-    padding: 3px;
     width: 13%;
 }
 
@@ -53,7 +52,7 @@ section {
 }
 
 .button:hover {
-    background-color: #aaa;
+    background-color: #999;
 }
 
 .button:active {
