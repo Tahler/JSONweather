@@ -41,11 +41,10 @@ function fillAccordions(weatherData) {
         // Headers
         var dayNumber = date.getDay() + i;
         if(dayNumber >= 7) dayNumber -= 7;
-        document.getElementById('day' + i + 'header').innerHTML = days[dayNumber];
+        date.setDate(date.getDate() + 1); // Don't add i! add 1 since it is being set everytime.
+        document.getElementById('day' + i + 'header').innerHTML = days[dayNumber] +'<br/>'+ formatDate(date);
         
         // Contents
-        date.setDate(date.getDate() + 1); // Don't add i! add 1 since it is being set everytime.
-        document.getElementById('day' + i + 'date').innerHTML = formatDate(date);
         document.getElementById('day' + i + 'highLowTemp').innerHTML = Math.round(weatherData.list[i].temp.max)+"/"+Math.round(weatherData.list[i].temp.min);
         document.getElementById("day"+i+"conditions").innerHTML = weatherData.list[i].weather[0].description;
         console.log(weatherData);

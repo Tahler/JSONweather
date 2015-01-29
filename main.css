@@ -1,7 +1,10 @@
 
 .accordion {
+    float: left;
+    margin: 5px;
+    padding: 0px;
     display: inline-block;
-    width: 10%;
+    width: 13%;
 }
 
 .accordion .ui-accordion-header {
@@ -10,5 +13,7 @@
 
 .accordion .ui-accordion-content {
     /*modifies the content of the accordion*/
+    height: 100px;
 }
 
+/* Need to clear:both */
