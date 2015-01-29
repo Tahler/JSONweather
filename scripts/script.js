@@ -47,6 +47,8 @@ function fillAccordions(weatherData) {
         // Contents
         document.getElementById('day' + i + 'highLowTemp').innerHTML = Math.round(weatherData.list[i].temp.max)+"/"+Math.round(weatherData.list[i].temp.min);
         document.getElementById("day"+i+"conditions").innerHTML = weatherData.list[i].weather[0].description;
+        document.getElementById("day"+i+"icon").src = "http://openweathermap.org/img/w/"+weatherData.list[i].weather[0].icon+".png";
+        console.log("http://openweathermap.org/img/w/"+weatherData.list[i].weather[0].icon+".png");
         console.log(weatherData);
     }
 }
