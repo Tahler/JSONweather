@@ -36,7 +36,7 @@ function formatDate(rawDate) {
 function fillAccordions(weatherData) {
     for(var i = 0; i < 7; i++) {
         // Headers
-        var dayNumber = date.getDay() + i;
+        var dayNumber = date.getDay();
         if(dayNumber >= 7) dayNumber -= 7;
         date.setDate(date.getDate() + 1); // Don't add i! add 1 since it is being set everytime.
         document.getElementById('day' + i + 'header').innerHTML = days[dayNumber] +'<br/>'+ formatDate(date);
