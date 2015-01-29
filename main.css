@@ -1,19 +1,43 @@
-
+html{ 
+    background-color:#95A7B2;
+    font-family: cursive;
+    font-size:20px; 
+    font-feature-settings: Arial, Helvetica, 
+}
+body{
+    min-height: 250px;
+    max-height: 1000px;
+    min-width: 250px;
+    max-width: 750px;
+    margin: 100 auto;
+    background: #505C5C;
+    border: 8px solid #000;
+    padding: 3px;
+}
 .accordion {
     float: left;
+     height:auto;
+    width: 1000px;
     margin: 5px;
-    padding: 0px;
+    padding: 3px;
     display: inline-block;
     width: 13%;
 }
 
 .accordion .ui-accordion-header {
-    /*modifies the header of the accordion*/
+     background-color: #FFFCF9;
+    margin: 5px;
+    padding: 3px;
+    color: black;
+    font align-content:left;
 }
 
 .accordion .ui-accordion-content {
-    /*modifies the content of the accordion*/
-    height: 130px;
+    background:#B2ABA1;
+    height: 125px;
+    width: 85px;
+    font-family: cursive;
+    font-feature-settings: Arial, Helvetica,
 }
 
 .button {
