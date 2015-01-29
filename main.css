@@ -26,13 +26,13 @@ section {
 /*    background: #FFFCF9; */
     padding: 3px;
     color: #000;
-    border: 2px solid #000;
+    border: 1px solid #000;
 /*    font align-content: left;*/
 }
 
 .accordion .ui-accordion-content {
 /*    background: #B2ABA1;*/
-    border: 2px solid #000;
+    border: 1px solid #000;
     border-top: 0px solid #000;
     height: 150px;
     font-family: cursive;
@@ -43,10 +43,24 @@ section {
     clear: both;
     text-align: center;
     margin: 5px;
+    padding: 5px;
     width: 100px;
     height: 25px;
-    background-color: grey;
+    background-color: #888;
+    border: 1px solid #000;
+    border-radius: 5px;
     color: #fff;
+}
+
+.button:hover {
+    background-color: #aaa;
+}
+
+.button:active {
+    margin-top: 4px;
+    margin-left: 4px;
+    border-top: 2px solid #000;
+    border-left: 2px solid #000;
 }
 
 /* Need to clear:both */
