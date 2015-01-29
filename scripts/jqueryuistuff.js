@@ -18,10 +18,12 @@ $(document).ready(function() {
     
     $('#toggle').on('click', function() {
         if(opened) {
+            $(this).html('Open All');
             opened = false;
             closeAll();
         }
         else {
+            $(this).html('Close All');
             opened = true;
             openAll();
         }

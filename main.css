@@ -1,41 +1,40 @@
 html{ 
     background-color:#95A7B2;
     font-family: cursive;
-    font-size:20px; 
+    font-size: 1.2em; 
     font-feature-settings: Arial, Helvetica, 
 }
-body{
-    min-height: 250px;
-    max-height: 1000px;
-    min-width: 250px;
-    max-width: 750px;
-    margin: 100 auto;
+
+section {
+    color: #fff;
+    margin: 50px;
     background: #505C5C;
-    border: 8px solid #000;
+    border: 5px solid #000;
     padding: 3px;
+    height: 500px;
 }
+
 .accordion {
     float: left;
-     height:auto;
-    width: 1000px;
+    display: inline-block;
     margin: 5px;
     padding: 3px;
-    display: inline-block;
     width: 13%;
 }
 
 .accordion .ui-accordion-header {
-     background-color: #FFFCF9;
-    margin: 5px;
+/*    background: #FFFCF9; */
     padding: 3px;
-    color: black;
-    font align-content:left;
+    color: #000;
+    border: 2px solid #000;
+/*    font align-content: left;*/
 }
 
 .accordion .ui-accordion-content {
-    background:#B2ABA1;
-    height: 125px;
-    width: 85px;
+/*    background: #B2ABA1;*/
+    border: 2px solid #000;
+    border-top: 0px solid #000;
+    height: 150px;
     font-family: cursive;
     font-feature-settings: Arial, Helvetica,
 }
@@ -48,7 +47,11 @@ body{
     height: 25px;
     background-color: grey;
     color: #fff;
-/*    display: inline;*/
 }
 
 /* Need to clear:both */
+
+p {
+/*    clear: both;*/
+}
+
