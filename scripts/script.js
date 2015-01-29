@@ -1,4 +1,4 @@
-////////////////////// Mr. Beatty's code ////////////////////////
+////////////////////// "Mr. Beatty's" code ////////////////////////
 
 var weatherData;
 var request = new XMLHttpRequest();
@@ -15,10 +15,7 @@ function loadData() {
 function loadComplete(evt) {
     weatherData = JSON.parse(request.responseText);
     document.getElementById("location").innerHTML = "Weather forecast for: "+weatherData.city.name;
-//    document.getElementById("day").innerHTML = (date.getMonth()+1) + "/" + date.getDate();
-//    document.getElementById("currentTemp").innerHTML = weatherData.list[0].temp.day;
-//    document.getElementById("conditions").innerHTML = weatherData.list[0].weather[0].main;
-//    document.getElementById("conditionsDesc").innerHTML = weatherData.list[0].weather[0].description;  
+//    
     
     fillAccordions(weatherData);
 }
@@ -46,8 +43,9 @@ function fillAccordions(weatherData) {
         
         // Contents
         document.getElementById('day' + i + 'highLowTemp').innerHTML = Math.round(weatherData.list[i].temp.max)+"/"+Math.round(weatherData.list[i].temp.min);
-        document.getElementById("day"+i+"conditions").innerHTML = weatherData.list[i].weather[0].description;
+        document.getElementById("day"+i+"conditions").innerHTML = weatherData.list[i].weather[0].main;
         document.getElementById("day"+i+"icon").src = "http://openweathermap.org/img/w/"+weatherData.list[i].weather[0].icon+".png";
+        document.getElementById("day"+i+"currentTemp").innerHTML = Math.round(weatherData.list[i].temp.day); 
         console.log("http://openweathermap.org/img/w/"+weatherData.list[i].weather[0].icon+".png");
         console.log(weatherData);
     }
