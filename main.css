@@ -16,4 +16,16 @@
     height: 100px;
 }
 
+.button {
+    clear: both;
+    text-align: center;
+/*    vertical-align: middle;*/
+    margin: 5px;
+    width: 100px;
+    height: 25px;
+    background-color: grey;
+    color: #fff;
+/*    display: inline;*/
+}
+
 /* Need to clear:both */

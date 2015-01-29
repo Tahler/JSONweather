@@ -1,16 +1,30 @@
 $(document).ready(function() {
-    // Perhaps we could toggle this to collapse and open up, similar to what weather.com had.
-//    $( ".accordion" ).on( "click", function() {
-//        $(this).animate({
-//            backgroundColor: "#40A",
-//            width: 500,
-//            height: 100
-//        }, 1000);
-//    });
+    
+    var opened = false;
+    
+    function openAll() {
+        $('.accordion').accordion("option", "active", 0);
+    }
+    
+    function closeAll() {
+        $('.accordion').accordion("option", "active", 2);
+    }
     
     $('.accordion').accordion({
-        active: false, // Makes it start collapsed
+        active: 2, // Makes it start collapsed
         collapsible: true,
         heightStyle: 'auto' // 'content'
     });
+    
+    $('#toggle').on('click', function() {
+        if(opened) {
+            opened = false;
+            closeAll();
+        }
+        else {
+            opened = true;
+            openAll();
+        }
+    });
+    
 });
