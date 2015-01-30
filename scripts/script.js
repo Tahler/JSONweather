@@ -1,5 +1,3 @@
-// Change color of the content backgrounds to match the temperature...
-
 ////////////////////// "Mr. Beatty's" code ////////////////////////
 
 var weatherData;
@@ -29,12 +27,38 @@ $('.accordion').css('width', document.getElementById('section').offsetWidth / 7 
 var days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
 var months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
 
-// Sets the date to tomorrow. Does all month adjusting for you.
-//        date.setDate(date.getDate() + 1);
-//        formatDate(date);
-
 function formatDate(rawDate) {
     return months[rawDate.getMonth()] + ' ' + rawDate.getDate() + ', ' + rawDate.getFullYear(); // reads as January 28, 2015
+}
+
+//cool to warm: blue     greenish    yellow  yellow-orange  orange   orange-red  bloodred   burgandy
+var colors = ['#00aeff', '#88c578', '#e1d51f', '#ffa604', '#ff8905', '#ff4c02', '#fe0a00', '#900000'];
+
+function temperatureColor(temperature) {
+    // as temperature increases, color return goes from white to sky blue to orange to red
+    // maybe a huge switch could implement this
+    
+    switch(true) {
+        case temperature < 20 :
+            return colors[0];
+        case temperature < 40 : 
+            return colors[1];
+        case temperature < 55 :
+            return colors[2];
+        case temperature < 70 :
+            return colors[3];
+        case temperature < 80 : 
+            return colors[4];
+        case temperature < 90 :
+            return colors[5];
+        case temperature < 100 :
+            return colors[6];
+        default :
+            return colors[7];
+    }
+    
+    
+    return "ffffff";
 }
 
 function fillAccordions(weatherData) {
@@ -49,7 +73,12 @@ function fillAccordions(weatherData) {
         document.getElementById('day' + i + 'highLowTemp').innerHTML = Math.round(weatherData.list[i].temp.max) + '/' + Math.round(weatherData.list[i].temp.min);
         document.getElementById('day' + i + 'conditions').innerHTML = weatherData.list[i].weather[0].main;
         document.getElementById('day' + i + 'icon').src = 'http://openweathermap.org/img/w/' + weatherData.list[i].weather[0].icon + '.png';
-        document.getElementById('day' + i + 'currentTemp').innerHTML = Math.round(weatherData.list[i].temp.day); 
+        
+        var currentTemp = Math.round(weatherData.list[i].temp.day);
+        document.getElementById('day' + i + 'currentTemp').innerHTML = currentTemp;
+        
+        $('#day' + i + 'accordion .ui-accordion-content').css('background', temperatureColor(currentTemp)); // Change color of the content backgrounds to match the temperature...
+        
 //        console.log('http://openweathermap.org/img/w/' + weatherData.list[i].weather[0].icon + '.png');
 //        console.log(weatherData);
     }

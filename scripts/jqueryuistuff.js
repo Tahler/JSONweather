@@ -1,27 +1,6 @@
 $(document).ready(function() {
     var opened = false;
-//    var openCount = 0;
-    
-//    function allOpen() {
-//        for(var i = 0; i < 7; i++) {
-//            if ($('#day' + i + 'accordion').accordion("option", "active")) {
-//                // Then this accordion is closed...
-//                return false;
-//            }
-//        }
-//        return true;
-//    }
-    
-//    function open() {
-//        if(openCount <= 6) {
-//            $('#day' + openCount + 'accordion').accordion("option", "active", 0);
-//            openCount++;
-//        }
-//        else {
-//            openCount = 0;
-//        }
-//    }
-    
+
     function openAll() { // Do this on an interval so it opens sequentially has a shutter effect
         $('.accordion').accordion("option", "active", 0);
     }
@@ -50,7 +29,4 @@ $(document).ready(function() {
 //            setInterval(open, 20);
         }
     });
-    
-//    setInterval(function() {console.log(allOpen())},10);
 });
-
