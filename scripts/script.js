@@ -22,7 +22,7 @@ function loadComplete(evt) {
 
 ////////////////////// Our code ////////////////////////
 
-$('.accordion').css('width', document.getElementById('section').offsetWidth / 7 - 13); // hardcoded AF
+$('.accordion').css('width', document.getElementById('section').offsetWidth / 7 - 13); // hardcoded hard
 
 var days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
 var months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
@@ -33,6 +33,13 @@ function formatDate(rawDate) {
 
 //cool to warm: blue     greenish    yellow  yellow-orange  orange   orange-red  bloodred   burgandy
 var colors = ['#00aeff', '#88c578', '#e1d51f', '#ffa604', '#ff8905', '#ff4c02', '#fe0a00', '#900000'];
+$('#colorkey').append('<p>Colors become warmer as the temperature increases.</p>');
+for(var i = 0; i < colors.length; i++) {
+    $('#colorkey').append('<div class="colorbox" id="color' + i + '"></div>');
+    $('#color' + i).css('background', colors[i]);
+}
+
+//todo add css for .colorbox
 
 function temperatureColor(temperature) {
     // as temperature increases, color return goes from white to sky blue to orange to red
@@ -41,13 +48,13 @@ function temperatureColor(temperature) {
     switch(true) {
         case temperature < 20 :
             return colors[0];
-        case temperature < 40 : 
+        case temperature < 30 : 
             return colors[1];
-        case temperature < 55 :
+        case temperature < 45 :
             return colors[2];
-        case temperature < 70 :
+        case temperature < 60 :
             return colors[3];
-        case temperature < 80 : 
+        case temperature < 75 : 
             return colors[4];
         case temperature < 90 :
             return colors[5];

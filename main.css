@@ -18,6 +18,20 @@ section {
 #location {
     text-align: center;
     display: inline;
+    border-bottom: 1px solid #555;
+}
+
+#colorkey p {
+    display: inline;
+}
+
+.colorbox {
+    margin: 1px;
+    border: 1px solid #000;
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background: #000;
 }
 
 .accordion {
